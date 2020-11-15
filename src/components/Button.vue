@@ -1,6 +1,19 @@
 <template>
+<div>Button 示例</div>
+<h1>示例1</h1>
 <div>
-    Button 文档
-    <p v-for="item in 100" :key="item">Dialog 的文档</p>
+    <Button>按钮：你好</Button>
 </div>
 </template>
+
+<script lang="ts">
+import Button from '../lib/Button.vue';
+export default {
+    components: {
+        Button
+    },
+    setup() {
+
+    }
+}
+</script>
