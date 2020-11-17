@@ -12,6 +12,10 @@ export default {
     // 2. props 不包含事件，attrs 包含
     // 3. props 没有申明属性，会跑到 attrs 中
     // 4. props 支持 string 以外的类型，attrs 只有 string 类型
+    /* vue 属性继承 */
+    // 1. 默认属性传给跟元素
+    // 2. inheritAttrs: false 可以禁用默认属性传给跟元素
+    // 3. v-bind="$attrs"/ content.attrs 绑定属性传递位置
     props: {
         theme: {
             type: String,
