@@ -1,6 +1,6 @@
 <template>
-<button class="gulu-button" :class="classes"  :disabled="disabled">
-    <span v-if="loading" class="gulu-loadingIndicator"></span>
+<button class="dia-button" :class="classes"  :disabled="disabled">
+    <span v-if="loading" class="dia-loadingIndicator"></span>
     <slot />
 </button>
 </template>
@@ -42,9 +42,9 @@ export default {
         const { theme, size, level } = props;
         const classes = computed(() => {
             return {
-                [`gulu-theme-${theme}`]: theme,
-                [`gulu-size-${size}`]: size,
-                [`gulu-level-${level}`]: level
+                [`dia-theme-${theme}`]: theme,
+                [`dia-size-${size}`]: size,
+                [`dia-level-${level}`]: level
             };
         });
         return { classes };
@@ -60,7 +60,7 @@ $blue: #409EFF;
 $radius: 4px;
 $red: #F56C6C;
 $grey: grey;
-.gulu-button {
+.dia-button {
     box-sizing: border-box;
     height: $h;
     padding: 0 12px;
@@ -89,7 +89,7 @@ $grey: grey;
     &::-moz-focus-inner {
         border: 0;
     }
-    &.gulu-theme-link{
+    &.dia-theme-link{
         border-color: transparent;
         box-shadow: none;
         color: $blue;
@@ -97,7 +97,7 @@ $grey: grey;
             color: lighten($blue, 10%);
         }
     }
-    &.gulu-theme-text{
+    &.dia-theme-text{
         border-color: transparent;
         box-shadow: none;
         color: inherit;
@@ -105,18 +105,18 @@ $grey: grey;
             background: darken(white, 5%);;
         }
     }
-    &.gulu-size-big {
+    &.dia-size-big {
         font-size: 24px;
         height: 48px;
         padding: 0 16px;
     }
-    &.gulu-size-small {
+    &.dia-size-small {
         font-size: 12px;
         height: 20px;
         padding: 0 4px;
     }
-    &.gulu-theme-button {
-        &.gulu-level-main {
+    &.dia-theme-button {
+        &.dia-level-main {
             background: $blue;
             color: white;
             border-color: $blue;
@@ -126,7 +126,7 @@ $grey: grey;
                 border-color: darken($blue, 10%);
             }
         }
-        &.gulu-level-danger {
+        &.dia-level-danger {
             background: $red;
             border-color: $red;
             color: white;
@@ -137,8 +137,8 @@ $grey: grey;
             }
         }
     }
-    &.gulu-theme-link {
-        &.gulu-level-danger {
+    &.dia-theme-link {
+        &.dia-level-danger {
             color: $red;
             &:hover,
             &:focus {
@@ -146,15 +146,15 @@ $grey: grey;
             }
         }
     }
-    &.gulu-theme-text {
-        &.gulu-level-main {
+    &.dia-theme-text {
+        &.dia-level-main {
             color: $blue;
             &:hover,
             &:focus {
                 color: darken($blue, 10%);
             }
         }
-        &.gulu-level-danger {
+        &.dia-level-danger {
             color: $red;
             &:hover,
             &:focus {
@@ -162,7 +162,7 @@ $grey: grey;
             }
         }
     }
-    &.gulu-theme-button {
+    &.dia-theme-button {
         &[disabled] {
             cursor: not-allowed;
             color: $grey;
@@ -171,13 +171,13 @@ $grey: grey;
             }
         }
     }
-    &.gulu-theme-link, &.gulu-theme-text {
+    &.dia-theme-link, &.dia-theme-text {
         &[disabled] {
             cursor: not-allowed;
             color: $grey;
         }
     }
-    > .gulu-loadingIndicator{
+    > .dia-loadingIndicator{
         width: 14px;
         height: 14px;
         display: inline-block;
@@ -186,10 +186,10 @@ $grey: grey;
         border-color: $blue $blue $blue transparent;
         border-style: solid;
         border-width: 2px;
-        animation: gulu-spin 1s infinite linear;
+        animation: dia-spin 1s infinite linear;
     }
 }
-@keyframes gulu-spin {
+@keyframes dia-spin {
     0%{transform: rotate(0deg)} 
     100%{transform: rotate(360deg)} 
 }  
