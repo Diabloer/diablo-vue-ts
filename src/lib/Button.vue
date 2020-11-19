@@ -1,6 +1,6 @@
 <template>
-<button class="dia-button" :class="classes"  :disabled="disabled">
-    <span v-if="loading" class="dia-loadingIndicator"></span>
+<button class="blo-button" :class="classes"  :disabled="disabled">
+    <span v-if="loading" class="blo-loadingIndicator"></span>
     <slot />
 </button>
 </template>
@@ -42,9 +42,9 @@ export default {
         const { theme, size, level } = props;
         const classes = computed(() => {
             return {
-                [`dia-theme-${theme}`]: theme,
-                [`dia-size-${size}`]: size,
-                [`dia-level-${level}`]: level
+                [`blo-theme-${theme}`]: theme,
+                [`blo-size-${size}`]: size,
+                [`blo-level-${level}`]: level
             };
         });
         return { classes };
@@ -60,7 +60,7 @@ $blue: #409EFF;
 $radius: 4px;
 $red: #F56C6C;
 $grey: grey;
-.dia-button {
+.blo-button {
     box-sizing: border-box;
     height: $h;
     padding: 0 12px;
@@ -89,7 +89,7 @@ $grey: grey;
     &::-moz-focus-inner {
         border: 0;
     }
-    &.dia-theme-link{
+    &.blo-theme-link{
         border-color: transparent;
         box-shadow: none;
         color: $blue;
@@ -97,7 +97,7 @@ $grey: grey;
             color: lighten($blue, 10%);
         }
     }
-    &.dia-theme-text{
+    &.blo-theme-text{
         border-color: transparent;
         box-shadow: none;
         color: inherit;
@@ -105,18 +105,18 @@ $grey: grey;
             background: darken(white, 5%);;
         }
     }
-    &.dia-size-big {
+    &.blo-size-big {
         font-size: 24px;
         height: 48px;
         padding: 0 16px;
     }
-    &.dia-size-small {
+    &.blo-size-small {
         font-size: 12px;
         height: 20px;
         padding: 0 4px;
     }
-    &.dia-theme-button {
-        &.dia-level-main {
+    &.blo-theme-button {
+        &.blo-level-main {
             background: $blue;
             color: white;
             border-color: $blue;
@@ -126,7 +126,7 @@ $grey: grey;
                 border-color: darken($blue, 10%);
             }
         }
-        &.dia-level-danger {
+        &.blo-level-danger {
             background: $red;
             border-color: $red;
             color: white;
@@ -137,8 +137,8 @@ $grey: grey;
             }
         }
     }
-    &.dia-theme-link {
-        &.dia-level-danger {
+    &.blo-theme-link {
+        &.blo-level-danger {
             color: $red;
             &:hover,
             &:focus {
@@ -146,15 +146,15 @@ $grey: grey;
             }
         }
     }
-    &.dia-theme-text {
-        &.dia-level-main {
+    &.blo-theme-text {
+        &.blo-level-main {
             color: $blue;
             &:hover,
             &:focus {
                 color: darken($blue, 10%);
             }
         }
-        &.dia-level-danger {
+        &.blo-level-danger {
             color: $red;
             &:hover,
             &:focus {
@@ -162,7 +162,7 @@ $grey: grey;
             }
         }
     }
-    &.dia-theme-button {
+    &.blo-theme-button {
         &[disabled] {
             cursor: not-allowed;
             color: $grey;
@@ -171,13 +171,13 @@ $grey: grey;
             }
         }
     }
-    &.dia-theme-link, &.dia-theme-text {
+    &.blo-theme-link, &.blo-theme-text {
         &[disabled] {
             cursor: not-allowed;
             color: $grey;
         }
     }
-    > .dia-loadingIndicator{
+    > .blo-loadingIndicator{
         width: 14px;
         height: 14px;
         display: inline-block;
@@ -186,10 +186,10 @@ $grey: grey;
         border-color: $blue $blue $blue transparent;
         border-style: solid;
         border-width: 2px;
-        animation: dia-spin 1s infinite linear;
+        animation: blo-spin 1s infinite linear;
     }
 }
-@keyframes dia-spin {
+@keyframes blo-spin {
     0%{transform: rotate(0deg)} 
     100%{transform: rotate(360deg)} 
 }  

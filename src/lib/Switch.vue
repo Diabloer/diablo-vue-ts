@@ -1,5 +1,5 @@
 <template>
-<button class="dia-switch" :class="{'dia-switch__checked':value}" @click="toggle"><span></span></button>
+<button class="blo-switch" :class="{'blo-switch__checked':value}" @click="toggle"><span></span></button>
 </template>
 
 <script lang="ts">
@@ -25,7 +25,7 @@ export default {
 $h: 22px;
 $h2: $h - 4px;
 
-.dia-switch {
+.blo-switch {
     height: $h;
     width: $h*2;
     border: none;
@@ -48,11 +48,11 @@ $h2: $h - 4px;
         outline: none;
     }
 
-    &.dia-switch__checked {
+    &.blo-switch__checked {
         background: #1890ff;
     }
 
-    &.dia-switch__checked>span {
+    &.blo-switch__checked>span {
         left: calc(100% - #{$h2} - 2px);
     }
 
@@ -62,7 +62,7 @@ $h2: $h - 4px;
         }
     }
 
-    &.dia-switch__checked:active {
+    &.blo-switch__checked:active {
         >span {
             width: $h2 + 4px;
             margin-left: -4px;
